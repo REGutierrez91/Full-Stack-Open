@@ -6,12 +6,12 @@ sequenceDiagram
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
 
-    Note right of browser: The browser sends the user's input "Full Stack Open 0.4" to the server
+    Note over browser: The browser sends the user's input <br/> "Full Stack Open 0.4" to the server
 
     server-->>browser: HTML document
     deactivate server
 
-    Note right of browser: The server send an URL redirection, requesting the browser to make a new HTTP GET to "/notes"
+    Note over browser: The server send an URL redirection <br/> requesting the browser to make <br/> a new HTTP GET to "/notes"
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
@@ -28,14 +28,14 @@ sequenceDiagram
     server-->>browser: main.js
     deactivate server
 
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+    Note over browser: The browser starts executing <br/> the JavaScript code that <br/> fetches the JSON from the server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     server-->>browser: [{ "content": "Full Stack Open 0.4", "date": "2024-6-12" }, ... ]
     deactivate server
 
-    Note right of browser: The browser executes the callback function that renders the notes with the new item added
+    Note over browser: The browser executes the callback <br/> function that renders the notes <br/> with the new item added
 
 
 
